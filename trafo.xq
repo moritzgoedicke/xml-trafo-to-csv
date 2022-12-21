@@ -1,4 +1,5 @@
-declare variable $file := doc("etc/1.OG_max_Volumen.xml");
+declare variable $path as xs:string external;
+declare variable $file := doc($path);
 
 
 declare variable $analogValue := $file//attribute::*[contains(., 'ObjectId:AnalogValue')]/..;
